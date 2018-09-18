@@ -1,4 +1,14 @@
 package Persons;
 
-public class Person {
+abstract public class Person
+{
+    String name;
+    String surname;
+    Person (String name, String  surname)
+    {
+        this.name = name;
+        this.surname = surname;
+    }
+
+    abstract public  void description();
 }
