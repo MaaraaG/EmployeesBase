@@ -1,15 +1,20 @@
 package Persons;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.text.ParseException;
 
 public class Employee extends Person
 {
     private double salary;
     private String work;
 
-    public Employee(String name, String surname, double salary, String work)
+    public Employee(String name, String surname, double salary, String work, String dateInString)
     {
-        super(name, surname);
+        super(name, surname, dateInString);
         this.salary = salary;
         this.work = work;
+
     }
 
     @Override
@@ -23,8 +28,11 @@ public class Employee extends Person
 
     public void work()
     {
-        System.out.println("status:  " + work);
+        System.out.println("status:  " + work );
+        System.out.println("Employed on: " + dateInString  );
         System.out.println("=====================================");
 
     }
+
+
 }

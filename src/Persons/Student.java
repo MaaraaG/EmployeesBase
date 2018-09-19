@@ -3,11 +3,10 @@ package Persons;
 public class Student extends Person
 {
     private String probation;
-    public Student (String name, String surname, String probation)
+    public Student (String name, String surname, String probation, String dateInString)
     {
-        super(name, surname);
+        super(name, surname, dateInString);
         this.probation = probation;
-
     }
 
     @Override
@@ -21,6 +20,8 @@ public class Student extends Person
     public void studies()
     {
         System.out.println("Status: " + probation);
+        System.out.println("accepted for internship: " + dateInString  );
         System.out.println("=====================================");
     }
+
 }
